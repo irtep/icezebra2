@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IceZebra Chat UI test</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+     -->
+  </head>
+  <body>
+    <header class= "headers">
+      Ice Zebra Chat UI
+    </header>
+    <div id= "askName">
+      Kirjoita nimesi:
+      <input type= "text" id= "customersName"><input type= "button" id= "submitName" value= "Lähetä"><br>
+    </div>
+    <main id= "mainPart" class= "centered noShow">
+      <center>
+        <div id= "chatWindow" class= "chatInAndOuts"></div>
+      </center>
+      <input type= "text" id= "chatInput" class= "chatInAndOuts">
+      <input type= "button" id= "sendMsg" value = "Lähetä">
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    <script src="./script.js" type= "module"></script>
+  </body>
+</html>
