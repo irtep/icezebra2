@@ -80,11 +80,11 @@ function subName() {
       // User is signed in.
       console.log('logged in');
         // check if any service agents online
-        db.collection('agentsOnline').get().then((querySnapshot) => {
+        db.collection('chatOnline').get().then((querySnapshot) => {
           querySnapshot.forEach( snap => {
             console.log('how many: ', snap.data().howManyAgents);
             // if 0 agents online:
-            if (snap.data().howManyAgents === 0) {
+            if (snap.data().value === false) {
               messut.innerHTML = `Chat on tällä hetkellä kiinni. Mutta lähetä meille emailia (support(a)trident-finland.fi)
               tai koita uudelleen myöhemmin.`;
               // hide irrelevant stuff
