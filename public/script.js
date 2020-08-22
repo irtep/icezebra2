@@ -106,7 +106,7 @@ function subName() {
                 db.collection('connectionCheck').doc(myChat.id).update({
                   lastCheck: newSeconds
                 });
-              }, 30000);
+              }, 10000);
               // start chat db
               db.collection("chats").doc(myChat.id).set({
                 chatId: myChat.id,
