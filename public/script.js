@@ -27,7 +27,8 @@ messageLine.addEventListener("keydown", function (e) {
         myChat.messages.push(freshMsg);
         console.log('myChat: ', myChat);
         db.collection('chats').doc(myChat.docRefId).update({
-          messages: myChat.messages
+          messages: myChat.messages,
+          borders: 'blueBorders'
         });
       }
     }
@@ -51,7 +52,8 @@ function sMbuttonClicked() {
     myChat.messages.push(freshMsg);
     console.log('sending, docrefid...', myChat);
     db.collection('chats').doc(myChat.docRefId).update({
-      messages: myChat.messages
+      messages: myChat.messages,
+      borders: 'blueBorders'
     });
   }
 }
